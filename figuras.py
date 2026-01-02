@@ -9,4 +9,17 @@ class Figura():
     def calcular_area():
         return 0
     
+
+class Cuadrado(Figura):
+    def __init__(self, color, nombre, lado):
+        super().__init__(color, nombre)
+        self.lado = lado
+        print(f"Cuadrado {nombre} creado. Lado {lado}")
+    
+    def calcular_area(self, lado):
+        area = self.lado*self.lado
+        return area
+    
+    
+
     
