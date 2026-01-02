@@ -6,7 +6,7 @@ class Figura():
     def mostrar_info(self):
         print(f"El nombre es {self.nombre} y el color es {self.color}")
     
-    def calcular_area():
+    def calcular_area(self):
         return 0
     
 
@@ -26,8 +26,8 @@ class Circulo(Figura):
         super().__init__(color, nombre)
         self.radio = radio
         print(f"Circulo {nombre} creado. Radio {radio}")
-    def calcular_area(self, radio):
-        area = 3.14*radio*radio
+    def calcular_area(self):
+        area = 3.14*self.radio*self.radio
         return area
 
 
@@ -41,3 +41,8 @@ class Triangulo(Figura):
     def calcular_area(self):
         area = (self.base * self.altura)/2
         return area
+    
+    
+fig1 = Cuadrado("rojo","Cuadrado xy", 3)
+fig2 = Circulo("Verde", "Circulo abc", 2)
+fig3 = Triangulo("Azul", "Triangulo sdf", 3, 4)
