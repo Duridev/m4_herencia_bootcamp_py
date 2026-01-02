@@ -21,5 +21,12 @@ class Cuadrado(Figura):
         return area
     
     
-
+class Circulo(Figura):
+    def __init__(self, color, nombre, radio):
+        super().__init__(color, nombre)
+        self.radio = radio
+        print(f"Circulo {nombre} creado. Radio {radio}")
+    def calcular_area(self, radio):
+        area = 3.14*radio*radio
+        return area
     
