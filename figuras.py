@@ -20,6 +20,10 @@ class Cuadrado(Figura):
         area = self.lado*self.lado
         return area
     
+    def mostrar_info(self):
+        super().mostrar_info()
+        print(f"Cuadrado {self.nombre}. Lado {self.lado}")
+    
     
 class Circulo(Figura):
     def __init__(self, color, nombre, radio):
@@ -29,6 +33,10 @@ class Circulo(Figura):
     def calcular_area(self):
         area = 3.14*self.radio*self.radio
         return area
+    
+    def mostrar_info(self):
+        super().mostrar_info()
+        print(f"Circulo {self.nombre}. Radio {self.radio}")
 
 
 class Triangulo(Figura):
@@ -42,7 +50,14 @@ class Triangulo(Figura):
         area = (self.base * self.altura)/2
         return area
     
+    def mostrar_info(self):
+        super().mostrar_info()
+        print(f"Triangulo {self.nombre}. Base {self.base}, Altura {self.altura}")
     
 fig1 = Cuadrado("rojo","Cuadrado xy", 3)
 fig2 = Circulo("Verde", "Circulo abc", 2)
 fig3 = Triangulo("Azul", "Triangulo sdf", 3, 4)
+
+fig1.mostrar_info()
+fig2.mostrar_info()
+fig3.mostrar_info()
