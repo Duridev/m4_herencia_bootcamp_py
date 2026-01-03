@@ -53,11 +53,26 @@ class Triangulo(Figura):
     def mostrar_info(self):
         super().mostrar_info()
         print(f"Triangulo {self.nombre}. Base {self.base}, Altura {self.altura}")
-    
+        
+        
 fig1 = Cuadrado("rojo","Cuadrado xy", 3)
 fig2 = Circulo("Verde", "Circulo abc", 2)
 fig3 = Triangulo("Azul", "Triangulo sdf", 3, 4)
 
+"""
 fig1.mostrar_info()
 fig2.mostrar_info()
 fig3.mostrar_info()
+
+print("El area del cuadrado es: ", fig1.calcular_area())
+print("El area del circulo es: ", fig2.calcular_area())
+print("El area del triangulo es: ", fig3.calcular_area())
+"""
+
+def mostrar_area_figura(figura):
+    print("Calculando area de", figura.nombre)
+    print("Area: ", figura.calcular_area())
+
+mostrar_area_figura(fig1)
+mostrar_area_figura(fig2)
+mostrar_area_figura(fig3)
