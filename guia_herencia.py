@@ -47,3 +47,16 @@ class Podcast(ContenidoDigital):
 
   def generar_transcripcion(self):
     print("Generando transcripción...")
+    
+    
+class LibroDigital(ContenidoDigital):
+  def __init__(self, titulo, autor, fecha_publicacion, duracion, calificacion, num_paginas, formato_lectura):
+    super().__init__(titulo, autor, fecha_publicacion, duracion, calificacion)
+    self.num_paginas=num_paginas
+    self.formato_lectura=formato_lectura
+
+  def marcar_pagina(self):
+    print("Se ha marcado una página...")
+
+  def calcular_tiempo_lectura(self):
+    return self.num_paginas/2
