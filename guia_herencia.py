@@ -36,3 +36,14 @@ class Video(ContenidoDigital):
 
   def agregar_subtitulo(self):
     print("Se han activado los subtitulos")
+    
+class Podcast(ContenidoDigital):
+  def __init__(self, titulo, autor, fecha_publicacion, duracion, calificacion, invitados, tema):
+    super().__init__(titulo, autor, fecha_publicacion, duracion, calificacion)
+    self.invitados=invitados
+    self.tema=tema
+  def agregar_invitado(self, nombre):
+    self.invitados.append(nombre)
+
+  def generar_transcripcion(self):
+    print("Generando transcripción...")
