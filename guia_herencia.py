@@ -60,3 +60,12 @@ class LibroDigital(ContenidoDigital):
 
   def calcular_tiempo_lectura(self):
     return self.num_paginas/2
+
+class Tutorial(Video):
+  def __init__(self,titulo, autor, fecha_publicacion, duracion, calificacion, formato, resolucion, dificultad, materiales_necesarios)
+    super().(titulo, autor, fecha_publicacion, duracion, calificacion, formato, resolucion)
+    self.dificultad = dificultad
+    self.materiales_necesarios = materiales_necesarios
+
+  def agregar_material(self, material)
+    self.materiales_necesarios.append(material)
