@@ -15,3 +15,24 @@ class ContenidoDigital:
   def es_largo(self):
     if self.duracion>30:
       return True
+  
+  
+class Video(ContenidoDigital):
+
+  def __init__(self,titulo, autor, fecha_publicacion, duracion, calificacion, formato, resolucion):
+    super().__init__(titulo, autor, fecha_publicacion, duracion, calificacion)
+    self.formato=formato
+    self.resolucion=resolucion
+
+  def subir_calidad(self):
+    if self.resolucion == "4K":
+      print("No es posible subir a una resolución mayor")
+    elif self.resolucion == "Full HD"
+      self.resolucion = "4K"
+      print("Se ha subido la resolución a 4K")
+    else:
+      self.resolucion = "Full HD"
+      print("Se ha subido la resolución a Full HD")
+
+  def agregar_subtitulo(self):
+    print("Se han activado los subtitulos")
