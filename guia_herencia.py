@@ -1,5 +1,5 @@
 class ContenidoDigital:
-  def __init__(self, titulo, autor, fecha_publicacion, duracion, calificacion):
+def __init__(self, titulo, autor, fecha_publicacion, duracion, calificacion):
     self.titulo=titulo
     self.autor=autor
     self.fecha_publicacion=fecha_publicacion
@@ -63,9 +63,18 @@ class LibroDigital(ContenidoDigital):
 
 class Tutorial(Video):
   def __init__(self,titulo, autor, fecha_publicacion, duracion, calificacion, formato, resolucion, dificultad, materiales_necesarios)
-    super().(titulo, autor, fecha_publicacion, duracion, calificacion, formato, resolucion)
+    super().__init__(titulo, autor, fecha_publicacion, duracion, calificacion, formato, resolucion)
     self.dificultad = dificultad
     self.materiales_necesarios = materiales_necesarios
 
   def agregar_material(self, material)
     self.materiales_necesarios.append(material)
+    
+class Entrevista(Podcast):
+  def __init__(self, titulo, autor, fecha_publicacion, duracion, calificacion, invitados, tema, entrevistado, empresa)
+    super().__init__(self, titulo, autor, fecha_publicacion, duracion, calificacion, invitados, tema)
+    self.entrevistado=entrevistado
+    self.empresa=empresa
+
+  def generar_resumen(self):
+    print("Se ha generado un resúmen...")
